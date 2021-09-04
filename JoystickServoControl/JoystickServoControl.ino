@@ -11,12 +11,12 @@ Servo myServo1;
 Servo myServo2;
 Servo myServo3;
 
-int servo1 = 1; //Digital PWM pin used by the servo 1
-int servo2 = 2; //Digital PWM pin used by the servo 2
-int servo3 = 3;
+int servo1 = 3; //Digital PWM pin used by the servo 1
+int servo2 = 5; //Digital PWM pin used by the servo 2
+int servo3 = 9;
 int joyX = 0;   //Analog pin to which the joystick (X) is connected
 int joyY = 1;   //Analog pin to which the joystick (Y) is connected
-int buttonPin = 4;
+int buttonPin = 8;
 int buttonState = 0;
 
 void sendCommand(uint8_t value) 
@@ -52,7 +52,7 @@ void loop(){
   myServo2.write(valY);
 
   if (buttonState == 0) {
-    myServo3.write(180);
+    myServo3.write(60);
   } else {
     myServo3.write(0);
   }
