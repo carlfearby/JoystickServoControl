@@ -44,7 +44,7 @@ void loop(){
   int valX = analogRead(joyX); //Read the joystick X value (value between 0 and 1023)
   int valY = analogRead(joyY); //Read the joystick Y value (value between 0 and 1023)
 
-  valX = map(valX, 0, 1023, 40, 90); //Scale the joystick X value to use it with the servo
+  valX = map(valX, 0, 1023, 0, 180); //Scale the joystick X value to use it with the servo
   valY = map(valY, 0, 1023, 0, 180); //Scale the joystick X value to use it with the servo
 
   //Sets the servo position according to the scaled values.
